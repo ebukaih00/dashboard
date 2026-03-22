@@ -1,19 +1,23 @@
-
-
-*{
+* {
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 
-body{
+
+
+
+
+body {
     display: flex;
     flex-direction: column;
     gap: 28px;
     padding: 0px 16px 0px 16px;
     background-color: #F1EFE8;
+
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -22,62 +26,128 @@ body{
     align-items: center;
 }
 
-.nav{
+.nav {
     display: flex;
     flex-direction: row;
     gap: 32px;
 }
 
-a:link{
+a:link {
     text-decoration: none;
     color: black;
 }
 
-.dp{
+.dp {
     padding: 12px;
     border-radius: 50%;
     background-color: orange;
 }
 
 
-.title{
+.title {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.maintitle{
+.maintitle {
     font-size: 28px;
     font-weight: bold;
 }
 
 
-.content{
+.container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+
 }
 
-.cards{
+.cards {
     display: flex;
     flex-direction: column;
-    width: 300px;
     height: fit-content;
     background-color: white;
     border: 1px solid lightgrey;
-    padding: 16px;
+    padding: 18px 16px 18px 16px;
     align-items: start;
     border-radius: 12px;
     gap: 14px;
 }
 
-.metric{
+.cardwide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 18px 16px 18px 16px;
+    align-items: start;
+    border-radius: 12px;
+    gap: 20px;
+    grid-column: span 2;
+}
+
+
+.metrics {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressbar {
+    background-color: #F1EFE8;
+    display: block;
+    align-items: cen;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+
+.statusbar {
+    border-radius: 16px;
+    height: 12px;
+
+}
+
+.blue {
+    background-color: #378ADD;
+    width: 80%;
+
+}
+
+.green {
+    background-color: #1D9E75;
+    width: 55%;
+
+}
+
+.orange {
+    background-color: #EF9F27;
+    width: 30%;
+
+}
+
+.metric {
     font-size: 24px;
     font-weight: bold;
 }
 
-.icon{
+.icon {
     padding: 16px;
     background-color: #E6F1FB;
     border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .cardwide {
+        grid-column: auto;
+    }
 }
